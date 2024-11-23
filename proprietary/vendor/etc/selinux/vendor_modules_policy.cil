@@ -1,0 +1,6 @@
+(type vendor_kernel_modules)
+(typeattributeset vendor_file_type (vendor_kernel_modules))
+(allow system_server vendor_kernel_modules (file (getattr open read map)))
+(allow init vendor_kernel_modules (file (getattr open read map)))
+(allow kernel vendor_kernel_modules (file (getattr open read map)))
+(allow kernel self (capability (sys_module)))

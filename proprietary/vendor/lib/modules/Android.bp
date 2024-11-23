@@ -1,0 +1,10 @@
+cc_prebuilt_library_shared {
+    name: "vendor_modules",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: glob(["proprietary/vendor/lib/modules/*.ko"]),
+    installable: true,
+    relative_install_path: "lib/modules",  // Install location for the modules
+    compile_multilib: "both",
+    stl: "none",
+}
