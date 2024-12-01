@@ -1,10 +1,2938 @@
+
 cc_prebuilt_library_shared {
-    name: "vendor_modules",
+    name: "adsp_loader_dlkm",
     vendor_available: true,
     recovery_available: true,
-    srcs: glob(["proprietary/vendor/lib/modules/*.ko"]),
+    srcs: ["adsp_loader_dlkm.ko"],
     installable: true,
-    relative_install_path: "lib/modules",  // Install location for the modules
+    relative_install_path: "lib/modules",
     compile_multilib: "both",
     stl: "none",
 }
+
+cc_prebuilt_library_shared {
+    name: "adsp_sleepmon",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["adsp_sleepmon.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "altmode-glink",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["altmode-glink.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_pkt_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["audio_pkt_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_prm_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["audio_prm_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "audpkt_ion_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["audpkt_ion_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "bam_dma",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["bam_dma.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "bcl_soc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["bcl_soc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "boot_stats",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["boot_stats.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "bt_fm_slim",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["bt_fm_slim.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "btpower",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["btpower.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "bwmon",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["bwmon.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "c1dcvs_scmi_v2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["c1dcvs_scmi_v2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "camera",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["camera.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "camera_sync",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["camera_sync.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cdsp-loader",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cdsp-loader.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cdsprm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cdsprm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cfg80211",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cfg80211.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "charger-ulog-glink",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["charger-ulog-glink.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cirrus_cs35l45",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cirrus_cs35l45.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cirrus_cs40l2x_codec",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cirrus_cs40l2x_codec.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cirrus_cs40l2x",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cirrus_cs40l2x.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cirrus_wm_adsp",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cirrus_wm_adsp.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cnss2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cnss2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cnss_nl",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cnss_nl.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cnss_plat_ipc_qmi_svc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cnss_plat_ipc_qmi_svc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cnss_prealloc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cnss_prealloc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cnss_utils",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cnss_utils.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "core_hang_detect",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["core_hang_detect.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-csr",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-csr.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-cti",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-cti.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-dummy",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-dummy.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-funnel",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-funnel.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-hwevent",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-hwevent.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-remote-etm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-remote-etm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-replicator",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-replicator.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-stm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-stm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-tgu",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-tgu.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-tmc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-tmc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-tmc-sec",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-tmc-sec.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-tpda",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-tpda.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-tpdm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-tpdm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "coresight-trace-noc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["coresight-trace-noc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cpucp_log",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cpucp_log.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cpufreq_stats_scmi_v2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cpufreq_stats_scmi_v2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "cpu_voltage_cooling",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["cpu_voltage_cooling.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ddr_cdev",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ddr_cdev.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "debugcc-cliffs",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["debugcc-cliffs.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "debugcc-pineapple",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["debugcc-pineapple.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "dmesg_dumper",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["dmesg_dumper.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "drm_display_helper",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["drm_display_helper.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "drm_dp_aux_bus",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["drm_dp_aux_bus.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "dwc3-msm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["dwc3-msm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "dynpf_scmi",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["dynpf_scmi.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "et603-int",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["et603-int.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "eud",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["eud.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "f_fs_ipc_log",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["f_fs_ipc_log.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "frpc-adsprpc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["frpc-adsprpc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gh_ctrl",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gh_ctrl.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gh_irq_lend",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gh_irq_lend.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gh_mem_notifier",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gh_mem_notifier.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gh_panic_notifier",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gh_panic_notifier.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gh_rm_booster",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gh_rm_booster.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gh_tlmm_vm_mem_access",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gh_tlmm_vm_mem_access.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "glink_pkt",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["glink_pkt.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "glink_probe",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["glink_probe.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gpr_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gpr_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gpucc-cliffs",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gpucc-cliffs.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "gsim",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["gsim.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "hdcp_qseecom_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["hdcp_qseecom_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "hdmi_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["hdmi_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "health_monitor",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["health_monitor.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "heap_mem_ext_v01",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["heap_mem_ext_v01.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "hung_task_enh",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["hung_task_enh.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "hvc_gunyah",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["hvc_gunyah.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "hwmon",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["hwmon.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "i2c-msm-geni",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["i2c-msm-geni.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "i3c-master-msm-geni",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["i3c-master-msm-geni.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "icnss2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["icnss2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ipam",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ipam.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ipanetm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ipanetm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ipclite",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ipclite.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ipclite_test",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ipclite_test.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "last_logs",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["last_logs.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "leds-qpnp-vibrator-ldo",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["leds-qpnp-vibrator-ldo.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "leds-qti-flash",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["leds-qti-flash.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "leds-qti-tri-led",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["leds-qti-tri-led.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "llcc_perfmon",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["llcc_perfmon.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "llcc-qcom",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["llcc-qcom.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lpass_cdc_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lpass_cdc_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lpass_cdc_rx_macro_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lpass_cdc_rx_macro_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lpass_cdc_tx_macro_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lpass_cdc_tx_macro_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lpass_cdc_va_macro_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lpass_cdc_va_macro_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lpass_cdc_wsa2_macro_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lpass_cdc_wsa2_macro_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lpass_cdc_wsa_macro_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lpass_cdc_wsa_macro_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lt9611uxc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lt9611uxc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "lxs_touchscreen",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["lxs_touchscreen.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mac80211",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mac80211.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "machine_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["machine_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "max31760_fan",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["max31760_fan.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mbhc_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mbhc_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mem-hooks",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mem-hooks.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "memlat",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["memlat.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mhi_dev_satellite",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mhi_dev_satellite.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mhi_dev_uci",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mhi_dev_uci.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mhi",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mhi.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "mpam",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["mpam.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_drm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_drm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm-eva",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm-eva.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_ext_display",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_ext_display.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_geni_serial",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_geni_serial.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_gpi",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_gpi.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_hw_fence",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_hw_fence.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_kgsl",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_kgsl.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_lmh_dcvs",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_lmh_dcvs.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_memshare",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_memshare.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm-mmrm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm-mmrm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_performance",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_performance.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_sharedmem",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_sharedmem.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_show_epoch",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_show_epoch.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_show_resume_irq",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_show_resume_irq.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_sysstats",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_sysstats.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "msm_video",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["msm_video.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "nvmem_qfprom",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["nvmem_qfprom.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "nxp-nci",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["nxp-nci.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "panel_event_notifier",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["panel_event_notifier.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pcie-pdc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pcie-pdc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pci-msm-drv",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pci-msm-drv.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pdr_interface",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pdr_interface.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "phy-generic",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["phy-generic.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "phy-msm-snps-eusb2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["phy-msm-snps-eusb2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "phy-msm-ssusb-qmp",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["phy-msm-ssusb-qmp.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "phy-qcom-emu",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["phy-qcom-emu.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "phy-qcom-ufs-qmp-v4",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["phy-qcom-ufs-qmp-v4.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pinctrl_lpi_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pinctrl_lpi_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pinctrl-somc-pmic",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pinctrl-somc-pmic.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pinctrl-spmi-gpio",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pinctrl-spmi-gpio.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pinctrl-spmi-mpp",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pinctrl-spmi-mpp.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pm8941-pwrkey",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pm8941-pwrkey.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pmic-glink-debug",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pmic-glink-debug.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pmic_glink",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pmic_glink.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "pwm-qti-lpg",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["pwm-qti-lpg.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "q6_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["q6_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "q6_notifier_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["q6_notifier_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "q6_pdr_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["q6_pdr_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qbt_handler",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qbt_handler.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qca_cld3_kiwi_v2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qca_cld3_kiwi_v2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qce50_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qce50_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcedev-mod_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcedev-mod_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-cpufreq-hw-debug",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-cpufreq-hw-debug.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_cpuss_sleep_stats",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_cpuss_sleep_stats.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-dload-mode",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-dload-mode.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_edac",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_edac.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_glink",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_glink.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_glink_smem",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_glink_smem.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_glink_spss",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_glink_spss.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-i2c-pmic",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-i2c-pmic.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_iommu_debug",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_iommu_debug.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_logbuf_boot_log",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_logbuf_boot_log.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_logbuf_vendor_hooks",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_logbuf_vendor_hooks.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_lpm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_lpm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_pil_info",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_pil_info.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-pon",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-pon.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_q6v5",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_q6v5.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_q6v5_pas",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_q6v5_pas.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_ramdump",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_ramdump.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_smd",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_smd.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-spmi-adc5-gen3",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-spmi-adc5-gen3.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-spmi-temp-alarm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-spmi-temp-alarm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_spss",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_spss.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_stats",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_stats.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_sysmon",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_sysmon.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom-vadc-common",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom-vadc-common.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcom_va_minidump",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcom_va_minidump.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qcrypto-msm_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qcrypto-msm_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qfprom-sys",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qfprom-sys.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qmi_helpers",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qmi_helpers.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qpnp-amoled-regulator",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qpnp-amoled-regulator.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qrng_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qrng_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qrtr-mhi",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qrtr-mhi.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qrtr-smd",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qrtr-smd.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qseecom_proxy",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qseecom_proxy.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qsee_ipc_irq_bridge",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qsee_ipc_irq_bridge.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_amoled_ecm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_amoled_ecm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_battery_charger",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_battery_charger.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_battery_debug",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_battery_debug.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_cpufreq_cdev",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_cpufreq_cdev.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_devfreq_cdev",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_devfreq_cdev.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti-fixed-regulator",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti-fixed-regulator.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti-glink-adc",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti-glink-adc.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti-ocp-notifier",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti-ocp-notifier.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_qmi_cdev",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_qmi_cdev.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_qmi_sensor_v2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_qmi_sensor_v2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "qti_userspace_cdev",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["qti_userspace_cdev.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "radio-i2c-rtc6226-qca",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["radio-i2c-rtc6226-qca.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rdbg",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rdbg.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rdtags",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rdtags.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "reboot-mode",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["reboot-mode.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "redriver",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["redriver.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "repeater",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["repeater.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "repeater-qti-pmic-eusb2",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["repeater-qti-pmic-eusb2.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_aps",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_aps.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_core",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_core.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_ctl",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_ctl.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_mem",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_mem.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_offload",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_offload.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_perf",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_perf.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_perf_tether",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_perf_tether.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_sch",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_sch.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_shs",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_shs.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rmnet_wlan",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rmnet_wlan.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "rproc_qcom_common",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["rproc_qcom_common.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "sg",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["sg.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "slg51000-regulator",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["slg51000-regulator.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "slimbus",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["slimbus.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "slim-qcom-ngd-ctrl",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["slim-qcom-ngd-ctrl.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "smcinvoke_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["smcinvoke_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "smmu_proxy_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["smmu_proxy_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "smp2p",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["smp2p.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "smp2p_sleepstate",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["smp2p_sleepstate.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "snd_event_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["snd_event_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "snd-soc-hdmi-codec",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["snd-soc-hdmi-codec.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "snd-usb-audio-qmi",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["snd-usb-audio-qmi.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "somc_battchg_ext",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["somc_battchg_ext.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "sony_camera",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["sony_camera.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "spcom",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["spcom.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "spf_core_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["spf_core_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "spi-msm-geni",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["spi-msm-geni.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "spmi-pmic-arb-debug",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["spmi-pmic-arb-debug.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "sps_drv",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["sps_drv.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "spss_utils",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["spss_utils.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "stm_console",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["stm_console.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "stm_core",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["stm_core.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "stm_ftrace",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["stm_ftrace.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "stm_heartbeat",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["stm_heartbeat.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "stm_p_ost",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["stm_p_ost.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "stub_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["stub_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "swr_ctrl_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["swr_ctrl_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "swr_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["swr_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "swr_dmic_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["swr_dmic_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "swr_haptics_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["swr_haptics_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "sync_fence",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["sync_fence.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "synx-driver",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["synx-driver.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "sysmon_subsystem_stats",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["sysmon_subsystem_stats.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "sys_pm_vx",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["sys_pm_vx.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "thermal_config",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["thermal_config.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "tz_log_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["tz_log_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ubwcp",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ubwcp.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "ucsi_glink",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["ucsi_glink.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "usb_f_ccid",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["usb_f_ccid.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "usb_f_cdev",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["usb_f_cdev.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "usb_f_gsi",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["usb_f_gsi.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "usb_f_qdss",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["usb_f_qdss.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wakeup_irq_debug",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wakeup_irq_debug.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd937x_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd937x_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd937x_slave_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd937x_slave_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd938x_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd938x_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd938x_slave_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd938x_slave_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd939x_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd939x_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd939x_slave_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd939x_slave_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd9xxx_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd9xxx_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd_core_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd_core_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wcd_usbss_i2c",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wcd_usbss_i2c.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wlan_firmware_service",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wlan_firmware_service.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wsa883x_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wsa883x_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+
+cc_prebuilt_library_shared {
+    name: "wsa884x_dlkm",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["wsa884x_dlkm.ko"],
+    installable: true,
+    relative_install_path: "lib/modules",
+    compile_multilib: "both",
+    stl: "none",
+}
+

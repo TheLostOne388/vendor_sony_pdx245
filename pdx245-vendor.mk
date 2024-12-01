@@ -613,8 +613,8 @@ PRODUCT_PACKAGES += \
     libvideoml \
     local_libcamera_metadata \
     vendor.qti.hardware.camera.aon-service-impl \
-    vendor.qti.hardware.camera.offlinecamera-V1-ndk \
-    vendor.qti.hardware.camera.offlinecamera-V2-ndk \
+    #vendor.qti.hardware.camera.offlinecamera-V1-ndk \
+    #vendor.qti.hardware.camera.offlinecamera-V2-ndk \
     vendor.qti.hardware.camera.offlinecamera-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     vendor.semc.hardware.extlight-V1-ndk_platform \
