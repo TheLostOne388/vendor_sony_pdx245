@@ -481,7 +481,6 @@ PRODUCT_PACKAGES += \
     libSnpeHtpPrepare \
     libaidenoiser \
     libaidenoiserv2 \
-    libarcsoft_bokeh_adapter \
     libarcsoft_dualcam_refocus_image \
     libarcsoft_dualcam_refocus_video \
     libarcsoft_hdr_adapter \

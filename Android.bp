@@ -1,4 +1,4 @@
-// Automatically generated file. DO NOT MODIFY (Beware all ye who shall enter this file - for only sadness and misery await you)
+// Automatically generated file. DO NOT MODIFY (Beware all ye who shall enter here - for only sadness and misery await you)
 //
 // This file is generated (badly, very very badly) by device/sony/pdx245/setup-makefiles.sh
 
@@ -22,6 +22,7 @@ filegroup {
         "vendor-moved-files.bp",
     ],
 }
+
 
 cc_prebuilt_library_shared {
     name: "libdevice_security_vendor",
