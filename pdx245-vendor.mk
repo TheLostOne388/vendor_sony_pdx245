@@ -7,7 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_AF_0_0x0107.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_AF_0_0x0107.dat \
-    vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_AF_1_0x0107.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_AF_1_0x0107.dat \
+#    vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_AF_1_0x0107.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_AF_1_0x0107.dat \
     vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_OIS_0x0106.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_OIS_0x0106.dat \
     vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_OIS_KAI_0x0102.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_OIS_KAI_0x0102.dat \
     vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_OIS_KAI_0x0104.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_OIS_KAI_0x0104.dat \
