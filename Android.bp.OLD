@@ -23,61 +23,6 @@ filegroup {
     ],
 }
 
-cc_prebuilt_library_shared {
-    name: "libfastcvdsp_stub",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libfastcvdsp_stub.so"],
-            shared_libs: [
-                "libc++",
-                "libcdsprpc",
-                "libdmabufheap",
-                "liblog",
-            ],
-        },
-    },
-    shared_libs: [
-        "libc++",
-        "libcdsprpc",
-        "libdmabufheap",
-        "liblog",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libfastcvopt",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libfastcvopt.so"],
-            shared_libs: [
-                "liblog",
-                "libdmabufheap",
-                "libfastcvdsp_stub",
-                "libcdsprpc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-    shared_libs: [
-        "liblog",
-        "libdmabufheap",
-        "libfastcvdsp_stub",
-        "libcdsprpc",
-    ],
-}
 
 cc_prebuilt_library_shared {
     name: "libdevice_security_vendor",
@@ -105,7 +50,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libprotobuf-cpp-lite-21.7.so"],
-            shared_libs: ["libc++", "libc", "libm", "libdl", "liblog"],
+            shared_libs: ["libc++", "libc", "libm", "libdl"],
         },
     },
     compile_multilib: "64",
@@ -253,7 +198,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -272,7 +216,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -291,7 +234,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -310,7 +252,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -329,7 +270,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -348,7 +288,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -367,7 +306,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -386,7 +324,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -405,7 +342,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -424,7 +360,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -443,7 +378,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -462,7 +396,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -481,7 +414,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -500,7 +432,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -519,7 +450,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -538,7 +468,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -557,7 +486,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -576,7 +504,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -595,7 +522,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -614,7 +540,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -633,7 +558,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -652,7 +576,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -671,7 +594,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -690,7 +612,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -709,7 +630,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -728,7 +648,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -747,7 +666,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -766,7 +684,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -785,7 +702,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -804,7 +720,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -823,7 +738,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -842,7 +756,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -861,7 +774,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -880,7 +792,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -899,7 +810,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -918,7 +828,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1081,7 +990,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1118,7 +1026,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1137,7 +1044,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1156,7 +1062,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1229,7 +1134,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1248,7 +1152,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1267,7 +1170,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1340,7 +1242,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1377,7 +1278,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1396,7 +1296,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1415,7 +1314,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1434,7 +1332,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1471,7 +1368,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1490,7 +1386,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1545,7 +1440,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1636,7 +1530,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1763,7 +1656,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1782,7 +1674,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -1999,7 +1890,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -2270,7 +2160,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -2307,7 +2196,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -2326,7 +2214,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "camera/components",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3024,7 +2911,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3042,7 +2928,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3060,7 +2945,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3078,7 +2962,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3096,7 +2979,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3114,7 +2996,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3132,7 +3013,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3150,7 +3030,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3168,7 +3047,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3186,7 +3064,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3204,7 +3081,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3222,7 +3098,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3240,7 +3115,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3258,7 +3132,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3276,7 +3149,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3294,7 +3166,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3312,7 +3183,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3330,7 +3200,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3348,7 +3217,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3366,7 +3234,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3384,7 +3251,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3402,7 +3268,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3420,7 +3285,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3438,7 +3302,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3456,7 +3319,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3536,7 +3398,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3588,7 +3449,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3606,7 +3466,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3624,7 +3483,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3642,7 +3500,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3660,7 +3517,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3679,7 +3535,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3734,7 +3589,6 @@ cc_prebuilt_library_shared {
     relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3753,7 +3607,6 @@ cc_prebuilt_library_shared {
 	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -3772,32 +3625,23 @@ cc_prebuilt_library_shared {
 	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
-    name: "libSNPE",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libSNPE.so"],
-            shared_libs: [
-                "libc++_shared",
-                "libc",
-                "libm",
-                "libdl",
-                "libEGL",
-                "libGLESv2",
-                "liblog",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libSNPE",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libSNPE.so"],
+			shared_libs: ["libc++_shared", "libc", "libm", "libdl", "libEGL", "libGLESv2", "liblog", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -4093,20 +3937,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libc++_shared",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libc++_shared.so"],
-            shared_libs: ["libc", "libdl"],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libc++_shared",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libc++_shared.so"],
+			shared_libs: ["libc", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -4124,7 +3968,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4172,7 +4015,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4190,7 +4032,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4259,7 +4100,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4277,7 +4117,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4326,7 +4165,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4344,7 +4182,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4464,7 +4301,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4542,7 +4378,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4645,7 +4480,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4663,7 +4497,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4681,7 +4514,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4699,7 +4531,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4717,7 +4548,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4735,7 +4565,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4770,7 +4599,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4788,7 +4616,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4806,7 +4633,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4824,7 +4650,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4842,7 +4667,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4860,7 +4684,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4878,7 +4701,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -4947,7 +4769,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -5051,8 +4872,6 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
-                "libprotobuf-cpp-lite-21.7",
-                "libsnsapi",
             ],
         },
     },
@@ -5080,31 +4899,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_aerial",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_aerial.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libfastcvopt",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_aerial",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_aerial.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -5131,59 +4939,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_angelpie",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_angelpie.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-                "libfastcvopt",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_angelpie",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_angelpie.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_baran",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_baran.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-                "libfastcvopt",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_baran",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_baran.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -5306,28 +5092,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_chokoballkeymgr",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_chokoballkeymgr.so"],
-            shared_libs: [
-                "libcrypto",
-                "libcutils",
-                "libc++_shared",
-                "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_chokoballkeymgr",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_chokoballkeymgr.so"],
+			shared_libs: ["libcrypto", "libcutils", "libc++_shared", "liblog", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -5499,17 +5277,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libsomc_histogram.so"],
             shared_libs: [
-                "libcdsprpc",
+                "libcdsprpc",  // Added libcdsprpc here as a dependency
                 "liblog",
                 "libc",
                 "libm",
                 "libdl",
-                "libsomc_chokoballpal",
-                "libsomc_chokoballcmn",
-                "libsomc_histogramrsc",
-                "libOpenCL",
-                "libc++_shared",
-		"libsomc_chokoballkeymgr",
             ],
         },
     },
@@ -5536,36 +5308,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_koeda",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_koeda.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libfastcvopt",  // Add this
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_koeda",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_koeda.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
     name: "libsomc_madeleinebase",
-    vendor: true,
+    vendor_available: true,
+    recovery_available: true,
+    srcs: ["proprietary/vendor/lib64/libsomc_madeleinebase.so"],
     installable: true,
     relative_install_path: "lib64",
     compile_multilib: "64",
@@ -5575,27 +5338,7 @@ cc_prebuilt_library_shared {
         "libc",
         "libm",
         "libdl",
-        "libSNPE",
-        "libfastcvopt",
-        "libsomc_chokoballkeymgr",
-        "libc++_shared",
     ],
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_madeleinebase.so"],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-                "libSNPE",
-                "libfastcvopt",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-            ],
-        },
-    },
 }
 
 cc_prebuilt_library_shared {
@@ -5792,31 +5535,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_sheera",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_sheera.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-                "libfastcvopt",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_sheera",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_sheera.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -5854,31 +5586,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_soda",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_soda.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-                "libfastcvopt", // Added the missing dependency
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_soda",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_soda.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -5916,31 +5637,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_wasabeef",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_wasabeef.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-                "libfastcvopt",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_wasabeef",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_wasabeef.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -5978,31 +5688,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_zunda",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsomc_zunda.so"],
-            shared_libs: [
-                "libsomc_madeleinebase",
-                "libSNPE",
-                "libfastboot",
-                "libsomc_chokoballkeymgr",
-                "libc++_shared",
-                "libc",
-                "libdl",
-                "liblog",
-                "libm",
-                "libfastcvopt",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
+	name: "libsomc_zunda",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsomc_zunda.so"],
+			shared_libs: ["libsomc_madeleinebase", "libSNPE", "libfastboot", "libsomc_chokoballkeymgr", "libc++_shared", "libc", "libdl", "liblog", "libm", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -6278,7 +5977,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -6313,7 +6011,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -6365,7 +6062,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -6383,7 +6079,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -6401,7 +6096,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	prefer: true,
 	soc_specific: true,
-    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
