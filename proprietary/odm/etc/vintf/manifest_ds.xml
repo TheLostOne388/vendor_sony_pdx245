@@ -1,0 +1,5 @@
+<!--
+    Input:
+        device/somc/asahi/odm_manifest_ds.xml
+-->
+<manifest version="7.0" type="device" target-level="8"/>

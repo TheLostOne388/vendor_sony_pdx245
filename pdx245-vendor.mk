@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/sony/pdx245
 
 PRODUCT_COPY_FILES += \
+    vendor/sony/pdx245/proprietary/vendor/lib64/hw/audio.primary.pineapple.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.pineapple.so \
     vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_AF_0_0x0107.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_AF_0_0x0107.dat \
 #    vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_AF_1_0x0107.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_AF_1_0x0107.dat \
     vendor/sony/pdx245/proprietary/vendor/camera/ALMA_FW_DATA_OIS_0x0106.dat:$(TARGET_COPY_OUT_VENDOR)/camera/ALMA_FW_DATA_OIS_0x0106.dat \
