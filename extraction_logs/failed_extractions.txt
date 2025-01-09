@@ -1,0 +1,4 @@
+Failed extractions:
+odm/etc/init/init.sony-device-common.rc
+odm/etc/init/init.sony-platform.rc
+odm/etc/ueventd.somc-platform.rc
