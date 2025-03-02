@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2024 Sony Corporation
+-->
+<!-- This feature indicates that the device unsupports uicc-based NFC card
+     emulation -->
+<permissions>
+    <unavailable-feature name="android.hardware.nfc.uicc" />
+</permissions>

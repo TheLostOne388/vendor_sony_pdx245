@@ -1,0 +1,7 @@
+vendor.semc.system.idd::IIdd u:object_r:hal_idd_hwservice:s0
+vendor.semc.hardware.charger::ICharger u:object_r:hal_somc_charger_hwservice:s0
+vendor.somc.hardware.superstamina::ISuperStamina u:object_r:hal_somc_superstamina_hwservice:s0
+vendor.semc.hardware.thermal::ISomcThermalEngineWrapper u:object_r:hal_somc_thermal_hwservice:s0
+vendor.somc.hardware.tgpa_boost::ITgpaBoost         u:object_r:vendor_hal_tgpa_boost_hwservice:s0
+vendor.semc.hardware.mmwavedirection::IMmwavedirection u:object_r:hal_mmwave_hwservice:s0
+vendor.qti.diaghal::Idiag       u:object_r:vendor_hal_diaghal_hwservice:s0
