@@ -1,14 +1,9 @@
-<!--/*
- * Copyright (c) 2023 Qualcomm Technologies, Inc.
- * All Rights Reserved.
- * Confidential and Proprietary - Qualcomm Technologies, Inc.
- */
--->
-<manifest version="1.0" type="device">
-    <hal format="aidl">
-        <name>android.hardware.secure_element</name>
-        <version>1</version>
-        <fqname>ISecureElement/SIM1</fqname>
-        <fqname>ISecureElement/SIM2</fqname>
-    </hal>
-</manifest>
+<hal format="aidl">
+    <name>android.hardware.secure_element</name>
+    <interface>
+        <name>ISecureElement</name>
+        <instance>SIM1</instance>
+        <instance>SIM2</instance>
+        <instance>eSE1</instance>
+    </interface>
+</hal>

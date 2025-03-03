@@ -1,0 +1,8 @@
+<hal format="aidl">
+    <name>android.hardware.sensors</name>
+    <version>2</version>
+    <interface>
+        <name>ISensors</name>
+        <instance>default</instance>
+    </interface>
+</hal>

@@ -1,0 +1,7 @@
+<hal format="aidl">
+    <name>android.hardware.nfc</name>
+    <interface>
+        <name>INfc</name>
+        <instance>default</instance>
+    </interface>
+</hal>

@@ -1,0 +1,7 @@
+<hal format="aidl">
+    <name>android.hardware.gatekeeper</name>
+    <interface>
+        <name>IGatekeeper</name>
+        <instance>default</instance>
+    </interface>
+</hal>

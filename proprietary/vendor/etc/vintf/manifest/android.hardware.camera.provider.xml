@@ -1,0 +1,7 @@
+<hal format="aidl">
+    <name>android.hardware.camera.provider</name>
+    <interface>
+        <name>ICameraProvider</name>
+        <instance>legacy/1</instance>
+    </interface>
+</hal>
