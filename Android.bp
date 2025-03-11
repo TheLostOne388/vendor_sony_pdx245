@@ -2485,3 +2485,70 @@ cc_prebuilt_library_shared {
         },
     },
 }
+
+
+// Existing .so definitions (add if missing)
+prebuilt_etc {
+    name: "android.hardware.sensors-service.pdx245.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors-service.pdx245.xml",
+    sub_dir: "vintf/manifest",
+    proprietary: true,
+    vendor: true,
+}
+cc_prebuilt_library_shared {
+    name: "android.hardware.sensors@2.0",
+    proprietary: true,
+    srcs: ["proprietary/vendor/lib64/android.hardware.sensors@2.0.so"],
+    vendor: true,
+}
+cc_prebuilt_library_shared {
+    name: "android.hardware.sensors@2.0-ScopedWakelock",
+    proprietary: true,
+    srcs: ["proprietary/vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so"],
+    vendor: true,
+}
+cc_prebuilt_library_shared {
+    name: "android.hardware.sensors@1.0",
+    proprietary: true,
+    srcs: ["proprietary/vendor/lib64/android.hardware.sensors@1.0.so"],
+    vendor: true,
+}
+cc_prebuilt_library_shared {
+    name: "android.frameworks.sensorservice@1.0",
+    proprietary: true,
+    srcs: ["proprietary/vendor/lib64/android.frameworks.sensorservice@1.0.so"],
+    vendor: true,
+}
+cc_prebuilt_binary {
+    name: "android.hardware.sensors@2.0-service.multihal",
+    relative_install_path: "hw",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.sensors-service.multihal"],
+    proprietary: true,
+    vendor: true,
+    shared_libs: [
+        "android.hardware.sensors@2.0",
+        "android.hardware.sensors@2.0-ScopedWakelock",
+        "android.hardware.sensors@1.0",
+        "android.frameworks.sensorservice@1.0",
+        "liblog",
+        "libutils",
+        "libhidlbase",
+    ],
+}
+
+
+// Android WiFi Keystore (HIDL) Prebuilt
+cc_prebuilt_library_shared {
+    name: "android.system.wifi.keystore@1.0",
+    proprietary: true,
+    srcs: ["proprietary/vendor/lib64/android.system.wifi.keystore@1.0.so"],
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.system.wifi.keystore.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/android.system.wifi.keystore.xml",
+    sub_dir: "vintf/manifest",
+    proprietary: true,
+    vendor: true,
+}
