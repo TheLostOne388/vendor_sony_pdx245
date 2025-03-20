@@ -1,4 +1,4 @@
-<manifest version="1.0" type="device">
+<manifest version="1.0" type="device" sepolicy-version="202404">
     <hal format="aidl">
         <name>android.hardware.boot</name>
         <version>1</version>
