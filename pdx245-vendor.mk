@@ -4,7 +4,7 @@
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/sony/pdx245
-
+ 
 PRODUCT_COPY_FILES += \
     vendor/sony/pdx245/proprietary/odm/etc/ueventd.somc-platform.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.somc-platform.rc \
     vendor/sony/pdx245/proprietary/vendor/etc/init/android.hardware.thermal-service.sony.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal-service.sony.rc \
