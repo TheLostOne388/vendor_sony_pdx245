@@ -1111,27 +1111,27 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libdisplayconfig.qti",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libdisplayconfig.qti.so"],
-    shared_libs: [
-        "liblog",
-        "libhidlbase",
-        "libutils",
-        "vendor.display.config@2.0",
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "libdisplayconfig.qti",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libdisplayconfig.qti.so"],
+//     shared_libs: [
+//         "liblog",
+//         "libhidlbase",
+//         "libutils",
+//         "vendor.display.config@2.0",
+//         "libc++",
+//         "libc",
+//         "libm",
+//         "libdl",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "libqmi_cci",
