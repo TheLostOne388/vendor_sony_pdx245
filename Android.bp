@@ -6,8 +6,9 @@ soong_namespace {
     imports: [
         "vendor/sony/sm8650-common",
         "external/OpenCL-ICD-Loader",
-        "hardware/qcom-caf/sm8550/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
-        "hardware/qcom-caf/sm8550/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
+        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
+        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
+        "hardware/qcom-caf/sm8650/display/gralloc",
     ],
 }
 
@@ -1088,28 +1089,28 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libgralloc.qti",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/libgralloc.qti.so"],
-    shared_libs: [
-        "android.hardware.graphics.mapper@4.0",
-        "libc++",
-        "libcutils",
-        "libgralloctypes",
-        "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-    ],
-    system_shared_libs: ["libc", "libm", "libdl"],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "libgralloc.qti",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/libgralloc.qti.so"],
+//     shared_libs: [
+//         "android.hardware.graphics.mapper@4.0",
+//         "libc++",
+//         "libcutils",
+//         "libgralloctypes",
+//         "libhardware",
+//         "libhidlbase",
+//         "liblog",
+//         "libutils",
+//     ],
+//     system_shared_libs: ["libc", "libm", "libdl"],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 // cc_prebuilt_library_shared {
 //     name: "libdisplayconfig.qti",
@@ -2401,42 +2402,42 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "audio.primary.pineapple",
-    owner: "sony",
-    vendor: true,
-    srcs: ["proprietary/vendor/lib64/hw/audio.primary.pineapple.so"],
-    shared_libs: [
-        "libbase",
-        "liblog",
-        "libcutils",
-        "libaudioutils",
-        "libexpat",
-        "libhidlbase",
-        "libprocessgroup",
-        "libfmq",
-        "libutils",
-        "libar-pal",
-        "android.hidl.allocator@1.0",
-        "android.hidl.memory@1.0",
-        "libhidlmemory",
-        "vendor.qti.hardware.pal@1.0-impl",
-        // "vendor.qti.hardware.pal@1.0",
-        "vendor.qti.hardware.AGMIPC@1.0-impl",
-        "vendor.qti.hardware.AGMIPC@1.0",
-        "libagm",
-        "libc++",
-    ],
-    strip: {
-        none: true,
-    },
-    check_elf_files: false,  // Add this line
-    target: {
-        android_arm64: {
-            relative_install_path: "hw",
-        },
-    },
-}
+// cc_prebuilt_library_shared {
+//     name: "audio.primary.pineapple",
+//     owner: "sony",
+//     vendor: true,
+//     srcs: ["proprietary/vendor/lib64/hw/audio.primary.pineapple.so"],
+//     shared_libs: [
+//         "libbase",
+//         "liblog",
+//         "libcutils",
+//         "libaudioutils",
+//         "libexpat",
+//         "libhidlbase",
+//         "libprocessgroup",
+//         "libfmq",
+//         "libutils",
+//         "libar-pal",
+//         "android.hidl.allocator@1.0",
+//         "android.hidl.memory@1.0",
+//         "libhidlmemory",
+//         "vendor.qti.hardware.pal@1.0-impl",
+//         // "vendor.qti.hardware.pal@1.0",
+//         "vendor.qti.hardware.AGMIPC@1.0-impl",
+//         "vendor.qti.hardware.AGMIPC@1.0",
+//         "libagm",
+//         "libc++",
+//     ],
+//     strip: {
+//         none: true,
+//     },
+//     check_elf_files: false,  // Add this line
+//     target: {
+//         android_arm64: {
+//             relative_install_path: "hw",
+//         },
+//     },
+// }
 
 cc_prebuilt_library_shared {
     name: "bix.fingerprint.default",
