@@ -6,9 +6,11 @@ soong_namespace {
     imports: [
         "vendor/sony/sm8650-common",
         "external/OpenCL-ICD-Loader",
-        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
-        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
+//        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
+//        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
         "hardware/qcom-caf/sm8650/display/gralloc",
+        "hardware/qcom-caf/sm8650/display/libqdmetadata",
+
     ],
 }
 
@@ -1405,7 +1407,7 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/libsomc_angelpie.so"],
-    shared_libs: [ 
+    shared_libs: [
         "libsomc_madeleinebase",
         "libSNPE",
         "libfastcvopt",
@@ -2123,32 +2125,32 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libqdMetaData",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libqdMetaData.so"],
-        },
-    },
-    shared_libs: [
-        "liblog",
-        "libcutils",
-        "libutils",
-        "libhidlbase",
-        "libgralloc.qti",
-        "libgralloctypes",
-        "libc",
-        "libm",
-        "libdl",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "libqdMetaData",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/lib64/libqdMetaData.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "liblog",
+//         "libcutils",
+//         "libutils",
+//         "libhidlbase",
+//         "libgralloc.qti",
+//         "libgralloctypes",
+//         "libc",
+//         "libm",
+//         "libdl",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "libopencv_core",
@@ -2553,3 +2555,96 @@ prebuilt_etc {
     proprietary: true,
     vendor: true,
 }
+
+// Prebuilt definition for vendor.semc.hardware.charger@1.2 implementation
+cc_prebuilt_library_shared {
+    name: "vendor.semc.hardware.charger@1.2-prebuilt-impl-somc", // Added -prebuilt
+    stem: "vendor.semc.hardware.charger@1.2.so", // Match the actual .so filename
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            // Use path relative to this Android.bp file
+            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.2.so"],
+        },
+    },
+    proprietary: true, // Indicates it's a vendor component
+    compile_multilib: "64",
+    check_elf_files: false,
+    shared_libs: [ // Common dependencies, verify if more are needed
+        "libhidlbase",
+        "libutils",
+        "libcutils", 
+        "libc++",
+        "liblog", 
+        "vendor.semc.hardware.charger@1.0-prebuilt", // Updated dependency name
+        "vendor.semc.hardware.charger@1.1-prebuilt", // Updated dependency name
+    ],
+    soc_specific: true, // Typically true for vendor HALs
+}
+
+// Prebuilt definition for vendor.semc.hardware.charger@1.0 implementation
+cc_prebuilt_library_shared {
+    name: "vendor.semc.hardware.charger@1.0-prebuilt", // Added -prebuilt
+    stem: "vendor.semc.hardware.charger@1.0.so",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.0.so"],
+        },
+    },
+    proprietary: true,
+    compile_multilib: "64",
+    check_elf_files: false,
+    shared_libs: [ // Assume similar base dependencies
+        "libhidlbase",
+        "libutils",
+        "libcutils",
+        "libc++",
+        "liblog",
+    ],
+    soc_specific: true,
+}
+
+// Prebuilt definition for vendor.semc.hardware.charger@1.1 implementation
+cc_prebuilt_library_shared {
+    name: "vendor.semc.hardware.charger@1.1-prebuilt", // Added -prebuilt
+    stem: "vendor.semc.hardware.charger@1.1.so",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.1.so"],
+        },
+    },
+    proprietary: true,
+    compile_multilib: "64",
+    check_elf_files: false,
+    shared_libs: [ // Assume similar base dependencies + maybe 1.0
+        "libhidlbase",
+        "libutils",
+        "libcutils",
+        "libc++",
+        "liblog",
+        "vendor.semc.hardware.charger@1.0-prebuilt", // Updated dependency name
+    ],
+    soc_specific: true,
+}
+
+
+
+
+
+
+
+
+
+
+
