@@ -2582,7 +2582,8 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
- // Prebuilt definition for vendor.semc.hardware.charger@1.2 implementation
+ //// STUBS BEGIN HERE ////
+
  cc_prebuilt_library_shared {
      name: "vendor.semc.hardware.charger@1.2-impl",
      owner: "sony",
@@ -2590,7 +2591,7 @@ cc_prebuilt_library_shared {
          none: true,
      },
      srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.2.so"],
-     header_libs: ["vendor.semc.hardware.charger@1.2_headers"],
+     // header_libs: ["vendor.semc.hardware.charger@1.2_headers"],
      shared_libs: [
          "libhidlbase",
          "libutils",
@@ -2599,12 +2600,12 @@ cc_prebuilt_library_shared {
          "liblog",
          "vendor.semc.hardware.charger@1.0",
          "vendor.semc.hardware.charger@1.1",
+         "vendor.semc.hardware.charger@1.2", // Added interface
      ],
      compile_multilib: "64",
      check_elf_files: true,
      prefer: true,
      soc_specific: true,
-     provides: ["vendor.semc.hardware.charger@1.2"],
  }
 
   cc_prebuilt_library_shared {
@@ -2618,7 +2619,7 @@ cc_prebuilt_library_shared {
              srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
          },
      },
-     header_libs: ["vendor.somc.hardware.radio@1.0_headers"],
+     // header_libs: ["vendor.somc.hardware.radio@1.0_headers"],
      shared_libs: [
          "android.hardware.radio@1.0",
          "libhidlbase",
@@ -2629,16 +2630,16 @@ cc_prebuilt_library_shared {
          "libc",
          "libm",
          "libdl",
+         "vendor.somc.hardware.radio@1.0", // Added interface
      ],
      compile_multilib: "64",
      prefer: true,
      soc_specific: true,
-     provides: ["vendor.somc.hardware.radio@1.0"],
  }
 
 // Prebuilt definition for vendor.hardware.biometrics.fingerprintRbs AIDL HAL
 cc_prebuilt_library_shared {
-    name: "vendor.hardware.biometrics.fingerprintRbs-V1-ndk",
+    name: "vendor.hardware.biometrics.fingerprintRbs-V1-ndk-impl", // Renamed
     owner: "sony",
     strip: {
         none: true,
@@ -2648,28 +2649,16 @@ cc_prebuilt_library_shared {
              srcs: ["proprietary/vendor/lib64/vendor.hardware.biometrics.fingerprintRbs-V1-ndk.so"],
         },
     },
-    // header_libs: [], // AIDL NDK usually doesn't need explicit header_libs here
+    // header_libs: [],
     shared_libs: [
         "libbinder_ndk",
         "libc++",
         "libc",
         "libm",
         "libdl",
+        "vendor.hardware.biometrics.fingerprintRbs", // Added AIDL interface name
     ],
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
-    provides: ["vendor.hardware.biometrics.fingerprintRbs/default"],
 }
-
-
-
-
-
-
-
-
-
-
-
-
