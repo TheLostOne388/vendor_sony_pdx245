@@ -632,33 +632,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.radio@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
-        },
-    },
-    shared_libs: [
-        "android.hardware.radio@1.0",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.somc.hardware.videoeffect-V1-ndk_platform",
     owner: "sony",
     strip: {
@@ -2556,35 +2529,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-// Prebuilt definition for vendor.semc.hardware.charger@1.2 implementation
-cc_prebuilt_library_shared {
-    name: "vendor.semc.hardware.charger@1.2-prebuilt-impl-somc", // Added -prebuilt
-    stem: "vendor.semc.hardware.charger@1.2.so", // Match the actual .so filename
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            // Use path relative to this Android.bp file
-            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.2.so"],
-        },
-    },
-    proprietary: true, // Indicates it's a vendor component
-    compile_multilib: "64",
-    check_elf_files: false,
-    shared_libs: [ // Common dependencies, verify if more are needed
-        "libhidlbase",
-        "libutils",
-        "libcutils", 
-        "libc++",
-        "liblog", 
-        "vendor.semc.hardware.charger@1.0-prebuilt", // Updated dependency name
-        "vendor.semc.hardware.charger@1.1-prebuilt", // Updated dependency name
-    ],
-    soc_specific: true, // Typically true for vendor HALs
-}
-
 // Prebuilt definition for vendor.semc.hardware.charger@1.0 implementation
 cc_prebuilt_library_shared {
     name: "vendor.semc.hardware.charger@1.0-prebuilt", // Added -prebuilt
@@ -2637,6 +2581,87 @@ cc_prebuilt_library_shared {
     ],
     soc_specific: true,
 }
+
+ // Prebuilt definition for vendor.semc.hardware.charger@1.2 implementation
+ cc_prebuilt_library_shared {
+     name: "vendor.semc.hardware.charger@1.2-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.2.so"],
+     header_libs: ["vendor.semc.hardware.charger@1.2_headers"],
+     shared_libs: [
+         "libhidlbase",
+         "libutils",
+         "libcutils",
+         "libc++",
+         "liblog",
+         "vendor.semc.hardware.charger@1.0",
+         "vendor.semc.hardware.charger@1.1",
+     ],
+     compile_multilib: "64",
+     check_elf_files: true,
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.semc.hardware.charger@1.2"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.somc.hardware.radio@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     target: {
+         android_arm64: {
+             srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
+         },
+     },
+     header_libs: ["vendor.somc.hardware.radio@1.0_headers"],
+     shared_libs: [
+         "android.hardware.radio@1.0",
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+         "libc",
+         "libm",
+         "libdl",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.somc.hardware.radio@1.0"],
+ }
+
+// Prebuilt definition for vendor.hardware.biometrics.fingerprintRbs AIDL HAL
+cc_prebuilt_library_shared {
+    name: "vendor.hardware.biometrics.fingerprintRbs-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+             srcs: ["proprietary/vendor/lib64/vendor.hardware.biometrics.fingerprintRbs-V1-ndk.so"],
+        },
+    },
+    // header_libs: [], // AIDL NDK usually doesn't need explicit header_libs here
+    shared_libs: [
+        "libbinder_ndk",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+    provides: ["vendor.hardware.biometrics.fingerprintRbs/default"],
+}
+
 
 
 
