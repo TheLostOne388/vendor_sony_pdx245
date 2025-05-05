@@ -1065,29 +1065,6 @@ cc_prebuilt_library_shared {
 }
 
 // cc_prebuilt_library_shared {
-//     name: "libgralloc.qti",
-//     owner: "sony",
-//     strip: {
-//         none: true,
-//     },
-//     srcs: ["proprietary/vendor/lib64/libgralloc.qti.so"],
-//     shared_libs: [
-//         "android.hardware.graphics.mapper@4.0",
-//         "libc++",
-//         "libcutils",
-//         "libgralloctypes",
-//         "libhardware",
-//         "libhidlbase",
-//         "liblog",
-//         "libutils",
-//     ],
-//     system_shared_libs: ["libc", "libm", "libdl"],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true,
-// }
-
-// cc_prebuilt_library_shared {
 //     name: "libdisplayconfig.qti",
 //     owner: "sony",
 //     strip: {
@@ -2415,25 +2392,6 @@ cc_prebuilt_library_shared {
 // }
 
 cc_prebuilt_library_shared {
-    name: "bix.fingerprint.default",
-    owner: "sony",
-    vendor: true,
-    srcs: ["proprietary/vendor/lib64/hw/bix.fingerprint.default.so"],
-    shared_libs: [
-        "liblog",
-        "libc++",
-    ],
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            relative_install_path: "hw",
-        },
-    },
-}
-
-cc_prebuilt_library_shared {
     name: "sound_trigger.primary.pineapple",
     owner: "sony",
     vendor: true,
@@ -2558,7 +2516,7 @@ cc_prebuilt_library_shared {
 // Prebuilt definition for vendor.semc.hardware.charger@1.1 implementation
 cc_prebuilt_library_shared {
     name: "vendor.semc.hardware.charger@1.1-prebuilt", // Added -prebuilt
-    stem: "vendor.semc.hardware.charger@1.1.so",
+    stem: "vendor.semc.hardware.charger@1.1",
     owner: "sony",
     strip: {
         none: true,
@@ -2585,31 +2543,27 @@ cc_prebuilt_library_shared {
  //// STUBS BEGIN HERE ////
 
  cc_prebuilt_library_shared {
-     name: "vendor.semc.hardware.charger@1.2-impl",
+     name: "vendor.semc.hardware.charger@1.2",
      owner: "sony",
      strip: {
          none: true,
      },
      srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.charger@1.2.so"],
-     // header_libs: ["vendor.semc.hardware.charger@1.2_headers"],
      shared_libs: [
          "libhidlbase",
          "libutils",
          "libcutils",
          "libc++",
          "liblog",
-         "vendor.semc.hardware.charger@1.0",
-         "vendor.semc.hardware.charger@1.1",
-         "vendor.semc.hardware.charger@1.2", // Added interface
      ],
      compile_multilib: "64",
-     check_elf_files: true,
-     prefer: true,
      soc_specific: true,
+     overrides: ["vendor.semc.hardware.charger@1.2"],
  }
 
   cc_prebuilt_library_shared {
      name: "vendor.somc.hardware.radio@1.0-impl",
+     stem: "vendor.somc.hardware.radio@1.0",
      owner: "sony",
      strip: {
          none: true,
@@ -2619,7 +2573,6 @@ cc_prebuilt_library_shared {
              srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
          },
      },
-     // header_libs: ["vendor.somc.hardware.radio@1.0_headers"],
      shared_libs: [
          "android.hardware.radio@1.0",
          "libhidlbase",
@@ -2630,16 +2583,16 @@ cc_prebuilt_library_shared {
          "libc",
          "libm",
          "libdl",
-         "vendor.somc.hardware.radio@1.0", // Added interface
      ],
      compile_multilib: "64",
      prefer: true,
      soc_specific: true,
  }
 
-// Prebuilt definition for vendor.hardware.biometrics.fingerprintRbs AIDL HAL
+// Prebuilt NDK Interface Library for vendor.hardware.biometrics.fingerprintRbs
+/*
 cc_prebuilt_library_shared {
-    name: "vendor.hardware.biometrics.fingerprintRbs-V1-ndk-impl", // Renamed
+    name: "vendor.hardware.biometrics.fingerprintRbs-V1-ndk",
     owner: "sony",
     strip: {
         none: true,
@@ -2649,16 +2602,58 @@ cc_prebuilt_library_shared {
              srcs: ["proprietary/vendor/lib64/vendor.hardware.biometrics.fingerprintRbs-V1-ndk.so"],
         },
     },
-    // header_libs: [],
     shared_libs: [
         "libbinder_ndk",
         "libc++",
         "libc",
         "libm",
         "libdl",
-        "vendor.hardware.biometrics.fingerprintRbs", // Added AIDL interface name
     ],
     compile_multilib: "64",
-    prefer: true,
+    vendor: true,
     soc_specific: true,
+}
+*/
+    
+// Prebuilt Fingerprint Implementation Component
+cc_prebuilt_library_shared {
+    name: "bix.fingerprint.default",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/lib64/hw/bix.fingerprint.default.so"],
+    shared_libs: [
+        "liblog",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+        "android.hardware.biometrics.fingerprint-V3-ndk",
+    ],
+    compile_multilib: "64",
+    vendor: true,
+    soc_specific: true,
+    relative_install_path: "hw",
+}
+
+// Prebuilt AOSP AIDL v3 Fingerprint NDK Interface Library - REMOVED (Moved to stub dir)
+cc_prebuilt_library_shared {
+    name: "android.hardware.biometrics.fingerprint-V3-ndk",
+    owner: "sony",
+    strip: { none: true, },
+    srcs: ["proprietary/vendor/lib64/android.hardware.biometrics.fingerprint-V3-ndk.so"],
+    shared_libs: [
+        "libbinder_ndk",
+        "android.hardware.biometrics.common-V3-ndk",
+        "android.hardware.keymaster-V4-ndk",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    vendor: true,
+    soc_specific: true,
+    overrides: ["android.hardware.biometrics.fingerprint-V3-ndk"],
 }
