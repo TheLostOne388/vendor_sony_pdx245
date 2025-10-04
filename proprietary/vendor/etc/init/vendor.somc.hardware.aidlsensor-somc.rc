@@ -1,5 +1,0 @@
-service hal_aidlsensor_service /vendor/bin/hw/vendor.somc.hardware.aidlsensor-service.somc
-    class hal
-    user system
-    group system
-    shutdown critical
