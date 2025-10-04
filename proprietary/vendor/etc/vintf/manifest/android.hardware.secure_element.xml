@@ -1,0 +1,13 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.secure_element</name>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+        </interface>
+    </hal>
+    <sepolicy>
+        <version>34.0</version>
+    </sepolicy>
+</manifest>
