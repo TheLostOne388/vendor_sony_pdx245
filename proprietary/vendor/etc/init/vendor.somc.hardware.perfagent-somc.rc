@@ -1,5 +1,0 @@
-service hal_perfagent_service /vendor/bin/hw/vendor.somc.hardware.perfagent-service.somc
-    class hal
-    user root
-    group root
-    shutdown critical
